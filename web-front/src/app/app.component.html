@@ -1,0 +1,22 @@
+<mat-toolbar class="header">
+  <div class="content">
+    <div class="left-side">
+      <img  alt="Mobi7" src="../assets/img/logo-mobi7.svg"  height="60"/>
+    </div>
+    <div class="divider" role="separator" aria-label="Divider"></div>
+    <div class="right-side">
+      <h1>Poi Challenge</h1>      
+    </div>
+  </div>
+</mat-toolbar>
+
+<main class="home">
+  <mat-card class="home-card mat-elevation-2">
+    <app-filtro (applyFilters)="onApplyFilters($event)" (resetFilters)="onResetFilters()"></app-filtro>
+    <app-tabela [permanencias]="permanencias"></app-tabela>
+    
+  </mat-card>
+</main>
+  
+
+<router-outlet />

@@ -1,0 +1,38 @@
+<div class="mat-elevation-z2">
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="poi">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Poi</th>
+      <td mat-cell *matCellDef="let row">
+        <strong>{{row.poi.nome}}</strong><br />
+         [{{row.poi.latitude}}, {{row.poi.longitude}}]
+      </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="placa">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Placa</th>
+      <td mat-cell *matCellDef="let row">{{row.placa}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="inicio">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Entrada</th>
+      <td mat-cell *matCellDef="let row">{{ formatDate(row.inicio) }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="final">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Saída</th>
+      <td mat-cell *matCellDef="let row">{{formatDate(row.final) }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="permanencia">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Permanência (min)</th>
+      <td mat-cell *matCellDef="let row">{{row.intervalo}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  
+</div>

@@ -1,0 +1,32 @@
+<div class="filter-container">
+    <form [formGroup]="searchForm" novalidate (ngSubmit)="onSubmit()">
+        <div class="search-card" >
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <input matInput [matDatepicker]="picker" placeholder="Escolher Data" formControlName="filtroData" name="filtroData">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-select placeholder="Escolher Placa" formControlName="filtroPlaca">
+                    @for (placa of placas; track placa) {
+                      <mat-option [value]="placa">{{ placa }}</mat-option>
+                    }
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              </div>
+              <div fxLayout="row" class="flex-row" fxLayoutAlign="center center">
+                <div class="">
+                    <button mat-raised-button class="secondary" type="reset">Limpar</button>
+                </div>
+                <div class="">
+                    <button mat-flat-button class="search-button" type="submit">Aplicar Filtro</button>
+                </div>
+              </div>
+        </div>
+      </form>
+  </div>

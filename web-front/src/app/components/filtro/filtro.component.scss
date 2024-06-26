@@ -1,0 +1,84 @@
+.full-width {
+    width: 100%;
+  }
+  
+  .search-card {
+    margin: 0px auto;
+    padding: 20px;
+  }
+  
+  .mat-radio-button {
+    display: block;
+    // margin: 5px 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .col:last-child {
+    margin-right: 0;
+  }
+  
+  .search-button,
+  .mat-raised-button {
+    background-color: #0092a3;
+  }
+  
+  td {
+    padding-right: 30px;
+    // .mat-raised-button {
+    //   // margin-bottom: 13px;
+    // }
+  }
+  
+  .table, .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content {
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 90vw;
+  }
+  .flex-row{
+    display: flex;
+    justify-content: right; 
+    align-items: right; 
+  }
+  .flex-row div{
+    margin-left: 20px;
+  }
+
+  .form-div {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .mat-form-field {
+    flex: 1; 
+    margin-right: 10px; 
+  }
+  
+  button {
+    flex: 0;
+    margin-bottom: 1rem;
+  }
+  
+  mat-icon {
+    position: absolute;
+    float: right;
+    top: 15px;
+    right: -10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.54);
+  }

@@ -1,0 +1,23 @@
+[
+  {
+    "poi": {
+      "id":1,
+      "nome":"PONTO 10",
+      "raio":300,
+      "latitude":-25.56742701740896,
+      "longitude":-51.47653363645077
+    },
+    "placa": "CAR0012",
+    "permanencia": 81
+  },
+  {
+    "poi": {
+      "id":2,
+      "nome":"PONTO 20",
+      "raio":300,
+      "latitude":-25.568056,
+      "longitude":-51.480278},
+    "placa": "CAR0012",
+    "permanencia": 81
+  }
+]

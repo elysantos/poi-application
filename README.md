@@ -27,12 +27,22 @@ Tanto para o Front quanto o BFF deve ser feito a instalação de dependências d
 npm install
 ```
 
-Em seguida na pasta de cada um dos projetos pode ser executado com o comando
+Em seguinda na posta do projeto de front (web-front) deve ser executado o comando abaixo:
 ```
 npm run start
 ```
 
-O projeto do front será executado na posta 4200 e o de bff será executado na porta 3000. Ambas as portas devem estar livres para o projeto executar.
+No caso do projeto bff-front, ele tem duas configurações, uma de dev e uma padrão (de entrega), a de dev consome os endpoints no projeto mock, ele deverá estar sendo executado para o projeto funcionar, caso rode sem a flag 'dev', será consumido os endpoints do desafio fornecidos originalmente.
+- Para execução em dev, basta executar com a flag dev da seguinte forma:
+```
+npm run start:dev
+``` 
+- Para execução padrão, basta executar da seguinte forma:
+```
+npm run start
+```
+
+O projeto do front será executado na posta 4200 e o de bff será executado na porta 3000. Ambas as portas devem estar livres para o projeto executar conforme esperado.
 
 Finalmente, basta acessar no navegador:
 ```

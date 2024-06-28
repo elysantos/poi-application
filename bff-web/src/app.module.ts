@@ -10,8 +10,10 @@ import { PlacasController } from './app/controller/placas/placas.controller';
 import { PosicaoService } from './domain/service/posicao/posicao.service';
 import { PosicaoController } from './app/controller/posicao/posicao.controller';
 
+
 @Module({
   imports: [ConfigModule.forRoot({
+    envFilePath: [ `${process.env.NODE_ENV}.env`],
     load: [configuration],
     isGlobal: true,
   }),

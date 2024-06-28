@@ -23,10 +23,14 @@ export class PosicaoService {
         );
     }
 
-    public  findPlacas() {
+    public  findPlacas(): Observable<AxiosResponse<Array<any>>> {
         let placaUrl = this.baseUrl + '/posicao/placas';
         return this.httpService.get(placaUrl).pipe(
-            map(response => response.data)
+            map(response => response.data),
+            catchError((error) => {
+                this.logger.error(error);
+                throw 'An error happened!';
+            })
         );
     }
 }

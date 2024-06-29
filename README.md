@@ -49,3 +49,6 @@ Finalmente, basta acessar no navegador:
 http://localhost:4200
 ```
 
+## 5. Documentação da API
+O bff-web teve seus endpoints mapeados para documentação com OpenAPI( swagger) o acesso se dá pelo endereço:
+https://localhost:3000/api
